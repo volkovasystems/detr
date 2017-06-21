@@ -1,0 +1,46 @@
+{
+  "name": "detr",
+  "version": "0.0.0",
+  "description": "Defer and default option parameter.",
+  "main": "detr.js",
+  "support": "detr.support.js",
+  "deploy": "detr.deploy.js",
+  "browser": "detr.deploy.js",
+  "scripts": {
+    "build": "babel detr.js --out-file detr.support.js --source-maps && webpack --progress --display-modules",
+    "test": "mocha detr-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkovasystems/detr.git"
+  },
+  "keywords": [
+    "defer",
+    "default",
+    "option",
+    "parameter",
+    "detr"
+  ],
+  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volkovasystems/detr/issues"
+  },
+  "homepage": "https://github.com/volkovasystems/detr#readme",
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "depher": "^0.35.0",
+    "doubt": "^0.27.0",
+    "empt": "^0.23.0",
+    "falzy": "^0.20.0",
+    "protype": "^0.22.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "source-map-loader": "^0.2.1",
+    "webpack": "^3.0.0"
+  }
+}

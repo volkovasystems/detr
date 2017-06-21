@@ -1,0 +1,33 @@
+{
+  "name": "detr",
+  "version": "0.0.0",
+  "description": "Defer and default option parameter.",
+  "main": "detr.deploy.js",
+  "support": "detr.support.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "defer",
+    "default",
+    "option",
+    "parameter",
+    "detr"
+  ],
+  "homepage": "https://github.com/volkovasystems/detr",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "depher": "^0.35.0",
+    "doubt": "^0.27.0",
+    "empt": "^0.23.0",
+    "falzy": "^0.20.0",
+    "protype": "^0.22.0"
+  }
+}
