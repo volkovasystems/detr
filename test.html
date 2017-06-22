@@ -1,8 +1,29 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./detr.deploy.js">
-		</script>
+		<title>detr unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./detr.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "detr unit test", function( assert ) {
+
+				( function test( ){
+					assert.deepEqual( detr( arguments, { "hi": "yeah", "hello": "yeah" } ),
+										{ "hi": "yeah", "hello": "world" }, "should be deeply equal" );
+				} )( 1, 2, { "hello": "world" }, 3, 4 );
+				
+			} );
+		</script>
+	</body>
 </html>

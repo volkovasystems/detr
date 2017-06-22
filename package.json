@@ -1,6 +1,6 @@
 {
   "name": "detr",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Defer and default option parameter.",
   "main": "detr.js",
   "support": "detr.support.js",
@@ -22,6 +22,10 @@
     "detr"
   ],
   "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "contributors": [
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/volkovasystems/detr/issues"

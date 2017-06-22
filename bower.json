@@ -1,11 +1,13 @@
 {
   "name": "detr",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Defer and default option parameter.",
   "main": "detr.deploy.js",
   "support": "detr.support.js",
   "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
