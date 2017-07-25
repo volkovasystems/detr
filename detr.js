@@ -49,19 +49,15 @@
 	@include:
 		{
 			"depher": "depher",
-			"doubt": "doubt",
 			"empt": "empt",
-			"falzy": "falzy",
-			"protype": "protype"
+			"falzy": "falzy"
 		}
 	@end-include
 */
 
 const depher = require( "depher" );
-const doubt = require( "doubt" );
 const empt = require( "empt" );
 const falzy = require( "falzy" );
-const protype = require( "protype" );
 
 const detr = function detr( parameter, defer ){
 	/*;
@@ -76,21 +72,24 @@ const detr = function detr( parameter, defer ){
 		@end-meta-configuration
 	*/
 
-	if( !doubt( parameter, AS_ARRAY ) ){
-		throw new Error( "invalid parameter" );
-	}
-
-	if( falzy( defer ) || !protype( defer, OBJECT ) || empt( defer ) ){
+	if(
+		falzy( defer ) ||
+		typeof defer != "object" ||
+		empt( defer )
+	){
 		throw new Error( "invalid defer option" );
 	}
 
 	let option = depher( parameter, OBJECT, { } );
 
-	Object.keys( defer ).forEach( ( property ) => {
+	let key = Object.keys( defer );
+	let length = key.length;
+	while( length-- ){
+		let property = key[ length ];
 		if( falzy( option[ property ] ) ){
-			option[ property ] = defer[ property ];
+			option[ property ] = defer[ property ]
 		}
-	} );
+	}
 
 	return option;
 };

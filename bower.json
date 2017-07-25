@@ -1,6 +1,6 @@
 {
   "name": "detr",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Defer and default option parameter.",
   "main": "detr.deploy.js",
   "support": "detr.support.js",
@@ -25,11 +25,17 @@
     "test",
     "tests"
   ],
+  "resolutions": {
+    "falzy": "^0.23.0",
+    "raze": "^0.34.0",
+    "zelf": "^0.13.0",
+    "truly": "^0.20.0",
+    "harden": "^0.23.0",
+    "asea": "^0.16.0"
+  },
   "dependencies": {
-    "depher": "^0.35.0",
-    "doubt": "^0.27.0",
-    "empt": "^0.23.0",
-    "falzy": "^0.20.0",
-    "protype": "^0.22.0"
+    "depher": "^0.37.0",
+    "empt": "^0.26.0",
+    "falzy": "^0.23.0"
   }
 }
