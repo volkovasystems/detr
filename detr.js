@@ -80,18 +80,23 @@ const detr = function detr( parameter, defer ){
 		throw new Error( "invalid defer option" );
 	}
 
-	let option = depher( parameter, OBJECT, { } );
+	let choice = { };
+	let option = depher( parameter, OBJECT, choice );
 
 	let key = Object.keys( defer );
 	let length = key.length;
 	while( length-- ){
 		let property = key[ length ];
+
 		if( falzy( option[ property ] ) ){
-			option[ property ] = defer[ property ]
+			choice[ property ] = defer[ property ];
+
+		}else{
+			choice[ property ] = option[ property ];
 		}
 	}
 
-	return option;
+	return choice;
 };
 
 module.exports = detr;
