@@ -67,26 +67,32 @@ const detr = function detr( parameter, defer ){
 					"Arguments",
 					"[*]"
 				],
-				"defer:required": "object"
+				"defer:required": [
+					"object",
+					"function"
+				]
 			}
 		@end-meta-configuration
 	*/
 
-	if(
-		falzy( defer ) ||
-		typeof defer != "object" ||
-		empt( defer )
-	){
+	if( typeof defer != "object" && typeof defer != "function" ){
 		throw new Error( "invalid defer option" );
 	}
 
 	let choice = { };
 	let option = depher( parameter, OBJECT, choice );
 
+	if( typeof defer == "function" ){
+		defer = defer( option );
+	}
+
+	if( empt( defer ) ){
+		throw new Error( "empty defer option" );
+	}
+
 	let key = Object.keys( defer );
-	let length = key.length;
-	while( length-- ){
-		let property = key[ length ];
+	while( key.length ){
+		let property = key.pop( );
 
 		if( falzy( option[ property ] ) ){
 			choice[ property ] = defer[ property ];

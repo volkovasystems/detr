@@ -10,7 +10,13 @@ const detr = require( "./detr.js" );
 	);
 } )( 1, 2, { "hello": "world" }, 3, 4 );
 
+let duration = Date.now( );
 assert.deepEqual( detr( { "hello": "world", "hi": 123 }, { "hello": "hola", "hi": "yeah", "hola": "amigo" } ),
 	{ "hello": "world", "hi": 123, "hola": "amigo" }, "should be deeply equal" );
+duration = Date.now( ) - duration;
 
-console.log( "ok" );
+assert.deepEqual( detr( { "hello": "world", "hi": 123 }, function defer( ){
+	return { "hello": 123, "hi":"world", "hola": "amigo" };
+} ), { "hello": "world", "hi": 123, "hola": "amigo" }, "should be deeply equal" );
+
+console.log( "ok", duration, "ms" );
