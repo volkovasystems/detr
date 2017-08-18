@@ -24,10 +24,5 @@
 		"bower_components",
 		"test",
 		"tests"
-	],
-	"dependencies": {
-		"depher": "^0.38.0",
-		"empt": "^0.27.0",
-		"falzy": "^0.23.0"
-	}
+	]
 }
